@@ -1,0 +1,81 @@
+$tabs-height: 50px;
+$tabs-gap: 35px;
+$tabs-width-after-content: 1156px;
+$tabs-height-after-content: 1px;
+
+$active-tab-underline-z-index: 10;
+$active-tab-after-height: 2px;
+.tabs {
+	position: relative;
+	width: 100%;
+
+	&:after {
+		content: "";
+		max-width: $tabs-width-after-content;
+		width: inherit;
+		height: $tabs-height-after-content;
+		background-color: $color-gray;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 0);
+	}
+}
+
+.tabsWrapper {
+	position: relative;
+	@include container;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: $tabs-height;
+	overflow-x: auto;
+	white-space: nowrap;
+
+	@media (max-width: $breakpoint-sm) {
+		justify-content: flex-start;
+	}
+}
+
+.tabsWrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.wrapper {
+	display: flex;
+	gap: $tabs-gap;
+	height: 100%;
+	align-items: center;
+}
+
+.tab {
+	@include text-projects-tab;
+	list-style: none;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	&:hover {
+		color: $color-primary-light;
+	}
+}
+
+.active {
+	position: relative;
+	color: $color-primary;
+
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: $active-tab-underline-z-index;
+		width: 125%;
+		height: $active-tab-after-height;
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: 0;
+		background-color: $color-primary;
+	}
+}

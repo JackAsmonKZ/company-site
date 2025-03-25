@@ -1,0 +1,10 @@
+$footer-height: 50px;
+
+.footer {
+	@include text-footer;
+	height: $footer-height;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color-dark;
+}

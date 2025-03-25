@@ -1,0 +1,7 @@
+.logo {
+	@include text-logo;
+
+	@media (max-width: $breakpoint-md) {
+		@include text-logo;
+	}
+}

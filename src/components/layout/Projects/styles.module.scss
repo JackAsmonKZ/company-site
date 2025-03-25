@@ -1,0 +1,54 @@
+$projects-padding-top: 40px;
+$projects-padding-bottom: 68px;
+$title-margin-bottom: 30px;
+$subtitle-margin-bottom: 30px;
+$project-card-column-gap: 20px;
+$project-card-row-gap: 23px;
+$project-card-margin-top: 30px;
+
+$projects-mobile-padding-bottom: 65px;
+$subtitle-mobile-width: 342px;
+$project-mobile-gap: 16px;
+
+.projects {
+	padding-top: $projects-padding-top;
+	padding-bottom: $projects-padding-bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	@media (max-width: $breakpoint-md) {
+		padding-bottom: $projects-mobile-padding-bottom;
+	}
+}
+
+.title {
+	@include text-projects-title;
+	margin-bottom: $title-margin-bottom;
+}
+
+.subtitle {
+	@include text-projects-subtitle;
+	margin-bottom: $subtitle-margin-bottom;
+	text-align: center;
+
+	@media (max-width: $breakpoint-md) {
+		max-width: $subtitle-mobile-width;
+	}
+}
+
+.projectsWrapper {
+	@include container;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: $project-card-column-gap;
+	row-gap: $project-card-row-gap;
+	margin-top: $project-card-margin-top;
+
+	@media (max-width: $breakpoint-md) {
+		gap: $project-mobile-gap;
+	}
+}

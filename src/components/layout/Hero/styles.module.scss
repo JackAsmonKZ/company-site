@@ -1,0 +1,37 @@
+$wrapper-padding-top: 50px;
+$wrapper-padding-bottom: 50px;
+$items-column-gap: 22px;
+$items-row-gap: 64px;
+$title-margin-bottom: 70px;
+
+.hero {
+	background-color: $color-light;
+}
+
+.wrapper {
+	@include container;
+	padding-top: $wrapper-padding-top;
+	padding-bottom: $wrapper-padding-bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	@include text-hero-title;
+	margin-bottom: $title-margin-bottom;
+	text-align: center;
+}
+
+.cardWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: $items-column-gap;
+	row-gap: $items-row-gap;
+
+	@media (max-width: $breakpoint-xl) {
+		flex-direction: column;
+	}
+}

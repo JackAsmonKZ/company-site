@@ -1,0 +1,23 @@
+$badge-width: 60px;
+$badge-height: 60px;
+$border-radius: 12px;
+
+$icon-width: 25px;
+$icon-height: 25px;
+
+.badge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $badge-width;
+	height: $badge-height;
+	box-shadow: $shadow-sm;
+	background-color: $color-primary-light;
+	border-radius: $border-radius;
+}
+
+.icon {
+	width: $icon-width;
+	height: $icon-height;
+	text-align: center;
+}

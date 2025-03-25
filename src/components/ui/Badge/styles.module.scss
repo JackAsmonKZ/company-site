@@ -1,0 +1,12 @@
+$badge-padding: 4px 8px;
+$badge-border-radius: 4px;
+
+.badge {
+	@include text-badge;
+	padding: $badge-padding;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color-gray;
+	border-radius: $badge-border-radius;
+}

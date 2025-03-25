@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+@mixin text($color, $size, $weight, $line-height, $letter-spacing) {
+	font-family: "Inter", sans-serif;
+	color: $color;
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+}
+
+@mixin text-logo {
+	@include text($color-light, 22px, 700, 100%, 0);
+
+	@media (max-width: $breakpoint-md) {
+		font-size: 18px;
+	}
+}
+
+@mixin text-header-navigation {
+	@include text($color-light, 16px, 400, 100%, 0);
+}
+
+@mixin text-hero-title {
+	@include text($color-black, 25px, 700, 100%, 0);
+}
+
+@mixin text-rating {
+	@include text($color-gray-dark, 14px, 500, 100%, 0);
+}
+
+@mixin text-badge {
+	@include text($color-dark, 12px, 500, 100%, 0);
+}
+
+@mixin text-card-title {
+	@include text($color-black, 20px, 700, 100%, 0);
+}
+
+@mixin text-card {
+	@include text($color-black, 14px, 400, 100%, 0);
+}
+
+@mixin text-projects-title {
+	@include text($color-black, 32px, 700, 100%, 0);
+}
+
+@mixin text-projects-subtitle {
+	@include text($color-black, 16px, 400, 100%, 0);
+}
+
+@mixin text-projects-tab {
+	@include text($color-gray-dark, 16px, 700, 100%, 0);
+}
+
+@mixin text-project-card-title {
+	@include text($color-gray-dark, 16px, 700, 100%, 0);
+}
+
+@mixin text-project-card-hover-title {
+	@include text($white, 18px, 700, 100%, 0);
+}
+
+@mixin text-project-card-hover-text {
+	@include text($color-accent, 12px, 500, 100%, 0);
+}
+
+@mixin text-button {
+	@include text($white, 14px, 500, 100%, 0);
+}
+
+@mixin text-footer {
+	@include text($white, 14px, 300, 100%, 0);
+}
+
+@mixin container {
+	max-width: 1186px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	& {
+		@media (max-width: $breakpoint-md) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+}

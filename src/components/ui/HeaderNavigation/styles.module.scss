@@ -1,0 +1,35 @@
+$underline-height: 2px;
+$underline-bottom-position: -17px;
+$items-gap: 20px;
+$item-transition: width 0.1s ease-in-out;
+
+.wrapper {
+	display: flex;
+	gap: $items-gap;
+	height: 100%;
+
+	@media (max-width: $breakpoint-md) {
+		display: none;
+	}
+}
+
+.item {
+	@include text-header-navigation;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: $underline-height;
+		left: 50%;
+		transform: translate(-50%, 0);
+		bottom: $underline-bottom-position;
+		background-color: $color-accent;
+		transition: $item-transition;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+}

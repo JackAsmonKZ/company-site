@@ -1,0 +1,66 @@
+$card-width: 372px;
+$card-height: 262px;
+$card-border-radius: 8px;
+$card-hover-padding-top: 80.5px;
+$card-hover-title-margin-bottom: 16px;
+$card-hover-text-margin-bottom: 16px;
+
+$card-mobile-width: 342px;
+
+.cardWrapper {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: $card-width;
+	height: $card-height;
+	border-radius: $card-border-radius;
+	background-color: $color-gray;
+	overflow: hidden;
+
+	&:hover {
+		.cardHover {
+			top: 0;
+		}
+	}
+
+	@media (max-width: $breakpoint-md) {
+		max-width: $card-mobile-width;
+	}
+}
+
+.card {
+	@include text-project-card-title;
+}
+
+.cardHover {
+	position: absolute;
+	top: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	flex-direction: column;
+	padding-top: $card-hover-padding-top;
+	width: $card-width;
+	height: $card-height;
+	background-color: $color-gray-opacity;
+	border-radius: $card-border-radius;
+	transition: top 0.3s ease-in-out;
+}
+
+.title {
+	@include text-project-card-hover-title;
+	margin-bottom: $card-hover-title-margin-bottom;
+}
+
+.text {
+	@include text-project-card-hover-text;
+	margin-bottom: $card-hover-title-margin-bottom;
+}
+
+.visible {
+	.cardHover {
+		top: 0;
+	}
+}

@@ -1,0 +1,16 @@
+$button-padding: 6px 8px;
+$border-radius: 4px;
+
+.button {
+	@include text-button;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $color-primary;
+	padding: $button-padding;
+	border-radius: $border-radius;
+	border: none;
+	&:active {
+		background-color: $color-primary-light;
+	}
+}

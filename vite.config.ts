@@ -69,6 +69,11 @@ export default defineConfig(({ mode }) => {
 			// proxy: getProxyConfig(env),
 		},
 		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: `@use "src/assets/scss/mixins" as *; @use "src/assets/scss/variables" as *;`,
+				},
+			},
 			modules: {
 				generateScopedName: isDev ? '[path]__[local]' : '[hash:base64:5]',
 			},

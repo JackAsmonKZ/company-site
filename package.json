@@ -30,6 +30,8 @@
 		"node": ">= 20 < 21"
 	},
 	"dependencies": {
+		"@fontsource/inter": "^5.2.5",
+		"@phosphor-icons/react": "^2.1.7",
 		"@popperjs/core": "^2.11.8",
 		"clsx": "^1.2.1",
 		"express": "^4.19.2",
@@ -38,9 +40,7 @@
 		"react-hook-form": "^7.51.3",
 		"react-quill": "^2.0.0",
 		"react-router-dom": "^6.23.0",
-		"vite": "^5.2.10",
-		"@phosphor-icons/react": "^2.1.7",
-		"framer-motion": "^11.13.5"
+		"vite": "^5.2.10"
 	},
 	"devDependencies": {
 		"@types/dompurify": "^3.0.5",

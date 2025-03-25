@@ -1,0 +1,56 @@
+$card-width: 370px;
+$card-height: 202px;
+$card-border-radius: 8px;
+$card-padding: 47px 20px 20px 20px;
+$card-title-margin-bottom: 12px;
+$card-text-margin-bottom: 22px;
+$card-icon-top: -40px;
+
+$card-width-mobile: 340px;
+
+.card {
+	cursor: pointer;
+	position: relative;
+	width: $card-width;
+	height: $card-height;
+	padding: $card-padding;
+	background-color: $white;
+	box-shadow: $shadow-md;
+	border-radius: $card-border-radius;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	transition: box-shadow 0.2s ease-in-out;
+
+	@media (max-width: $breakpoint-md) {
+		width: $card-width-mobile;
+	}
+
+	&:hover {
+		box-shadow: $shadow-lg;
+	}
+}
+
+.icon {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: $card-icon-top;
+}
+
+.title {
+	@include text-card-title;
+	margin-bottom: $card-title-margin-bottom;
+}
+
+.text {
+	@include text-card;
+	margin-bottom: $card-text-margin-bottom;
+}
+
+.cardFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
